@@ -1,44 +1,102 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
+import 'lista.dart';
+
 void main() {
   runApp(MaterialApp(
-    home: ListaDeCompras(),
+    home: TelaBemVindo(),
   ));
 }
 
-class ListaDeCompras extends StatefulWidget {
-  @override
-  _ListaDeComprasState createState() => _ListaDeComprasState();
-}
-
-class _ListaDeComprasState extends State<ListaDeCompras> {
-  // Listas de itens por categoria
-  List<String> farmaciaItems = [];
-  List<String> shoppingItems = [];
-  List<String> supermercadoItems = [];
-
-  String _selectedCategory = 'Farmácia'; // Categoria selecionada inicialmente
-  final TextEditingController _itemController = TextEditingController(); // Controlador para o nome do item
+class TelaBemVindo extends StatelessWidget {
+  void _showAddItemDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Adicionar Item'),
+          content: TextField(
+            decoration: InputDecoration(hintText: 'Nome do item'),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('Cancelar'),
+            ),
+            TextButton(
+              onPressed: () {
+                // Adicionar item à lista
+                Navigator.of(context).pop();
+              },
+              child: Text('Adicionar'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lista de Compras'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // Ação do botão de voltar
-          },
+        automaticallyImplyLeading: false, // Remove o botão de voltar
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Olá Lívia!',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            IconButton(
+              icon: Icon(Icons.person, color: Colors.black),
+              onPressed: () {
+                // Ação do botão de configurações
+              },
+            ),
+          ],
         ),
       ),
-      body: ListView(
-        padding: EdgeInsets.all(8),
-        children: <Widget>[
-          _buildCategoria('Farmácia', farmaciaItems),
-          _buildCategoria('Shopping', shoppingItems),
-          _buildCategoria('Supermercado', supermercadoItems),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Bem vindo ao Remindr!',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 20),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16.0),
+              child: Image.asset(
+                'lib/assets/images/home.jpg',
+                height: 300,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Clique no "+" para adicionar um item em sua lista ou em "☰" para visualizá-la.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[700],
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
@@ -58,7 +116,12 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
               icon: Icon(Icons.menu),
               color: Colors.white,
               onPressed: () {
-                // Ação do botão Menu
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => ListaDeCompras(),
+                ),
+                );
               },
             ),
           ],
@@ -66,7 +129,12 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _showAddItemDialog(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ListaDeCompras(showPopup: true),
+            ),
+          );
         },
         child: Icon(Icons.add, size: 40, color: Colors.white),
         shape: StadiumBorder(),
@@ -74,116 +142,5 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
-  }
-
-  Widget _buildCategoria(String categoria, List<String> itens) {
-    return Card(
-      margin: EdgeInsets.symmetric(vertical: 8),
-      child: ExpansionTile(
-        title: Row(
-          children: [
-            Icon(Icons.category, color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0)),
-            SizedBox(width: 10),
-            Text(categoria),
-          ],
-        ),
-        children: itens.asMap().entries.map((entry) {
-          int index = entry.key;
-          String item = entry.value;
-          return ListTile(
-            title: Text(item),
-            trailing: IconButton(
-              icon: Icon(Icons.delete, color: Colors.red),
-              onPressed: () {
-                _deleteItem(categoria, index);
-              },
-            ),
-          );
-        }).toList(),
-      ),
-    );
-  }
-
-  // Função para mostrar o popup de adicionar item
-  void _showAddItemDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text("Adicionar Item"),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              TextField(
-                controller: _itemController,
-                decoration: InputDecoration(labelText: "Nome do item"),
-              ),
-              SizedBox(height: 20),
-              DropdownButton<String>(
-                value: _selectedCategory,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    _selectedCategory = newValue!;
-                  });
-                },
-                items: <String>['Farmácia', 'Shopping', 'Supermercado']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-              ),
-            ],
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: Text("Cancelar"),
-              onPressed: () {
-                Navigator.of(context).pop(); // Fecha o popup
-              },
-            ),
-            TextButton(
-              child: Text("Adicionar"),
-              onPressed: () {
-                _addItemToCategory();
-                Navigator.of(context).pop(); // Fecha o popup
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  // Função para adicionar o item na categoria correta
-  void _addItemToCategory() {
-    String itemName = _itemController.text;
-
-    if (itemName.isNotEmpty) {
-      setState(() {
-        if (_selectedCategory == 'Farmácia') {
-          farmaciaItems.add(itemName);
-        } else if (_selectedCategory == 'Shopping') {
-          shoppingItems.add(itemName);
-        } else if (_selectedCategory == 'Supermercado') {
-          supermercadoItems.add(itemName);
-        }
-      });
-      _itemController.clear(); // Limpa o campo de texto após adicionar
-    }
-  }
-
-  // Função para deletar o item da categoria correta
-  void _deleteItem(String categoria, int index) {
-    setState(() {
-      if (categoria == 'Farmácia') {
-        farmaciaItems.removeAt(index);
-      } else if (categoria == 'Shopping') {
-        shoppingItems.removeAt(index);
-      } else if (categoria == 'Supermercado') {
-        supermercadoItems.removeAt(index);
-      }
-    });
   }
 }
