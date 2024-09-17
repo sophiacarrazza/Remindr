@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'lista.dart';
+import 'login.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -30,6 +31,10 @@ class TelaBemVindo extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.person, color: Colors.black),
               onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login())
+                  );
                 // Ação do botão de configurações
               },
             ),
