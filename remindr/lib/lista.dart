@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 void main() {
   runApp(MaterialApp(
@@ -9,7 +10,7 @@ void main() {
 
 class ListaDeCompras extends StatefulWidget {
   final bool showPopup;
-  ListaDeCompras({this.showPopup = false}); //valor padrao
+  ListaDeCompras({this.showPopup = false}); // valor padrão
 
   @override
   _ListaDeComprasState createState() => _ListaDeComprasState();
@@ -24,9 +25,16 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
   String _selectedCategory = 'Farmácia'; // Categoria selecionada inicialmente
   final TextEditingController _itemController = TextEditingController();
 
+  // Variáveis para reconhecimento de voz
+  late stt.SpeechToText _speech;
+  bool _isListening = false;
+  String _textSpoken = "";
+
   @override
   void initState() {
     super.initState();
+    _speech = stt.SpeechToText();
+
     // Mostrar o diálogo se o parâmetro showPopup for verdadeiro
     if (widget.showPopup) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -34,6 +42,28 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
       });
     }
   }
+
+  // Função para iniciar ou parar o reconhecimento de voz
+  void _listen() async {
+    if (!_isListening) {
+      bool available = await _speech.initialize();
+      if (available) {
+        setState(() => _isListening = true);
+        _speech.listen(onResult: (val) {
+          setState(() {
+            _textSpoken = val.recognizedWords;
+            _itemController.text = _textSpoken;
+          });
+        });
+      }
+    } else {
+      setState(() => _isListening = false);
+      _speech.stop();
+      _itemController.clear();
+      _textSpoken = "";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,30 +91,37 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+            SizedBox(width: 50),
             IconButton(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home, size: 50),
               color: Colors.white,
               onPressed: () {
                 Navigator.popUntil(context, ModalRoute.withName('/'));
               },
             ),
+            Spacer(),
             IconButton(
-              icon: Icon(Icons.menu),
+              icon: Icon(Icons.menu, size: 50),
               color: Colors.white,
-              onPressed: () {
-
-              },
+              onPressed: () {},
             ),
+            SizedBox(width: 50),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _showAddItemDialog(context);
-        },
-        child: Icon(Icons.add, size: 40, color: Colors.white),
-        shape: StadiumBorder(),
-        backgroundColor: Color(0xFFF9AA33),
+      floatingActionButton: Container(
+        height: 90.0,
+        width: 90.0,
+        child: FittedBox(
+          child: FloatingActionButton(
+            onPressed: () {
+              _showAddItemDialog(context);
+            },
+            child: Icon(Icons.add, size: 40, color: Colors.white),
+            shape: StadiumBorder(),
+            backgroundColor: Color(0xFFF9AA33),
+          ),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
@@ -96,7 +133,9 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
       child: ExpansionTile(
         title: Row(
           children: [
-            Icon(Icons.category, color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0)),
+            Icon(Icons.category,
+                color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                    .withOpacity(1.0)),
             SizedBox(width: 10),
             Text(categoria),
           ],
@@ -138,6 +177,15 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
                     decoration: InputDecoration(labelText: "Nome do item"),
                   ),
                   SizedBox(height: 20),
+                  // Botão para iniciar o reconhecimento de voz
+                  IconButton(
+                    icon: Icon(
+                      _isListening ? Icons.mic : Icons.mic_none,
+                      color: _isListening ? Colors.red : Colors.black,
+                    ),
+                    onPressed: _listen, // Inicia/parar o reconhecimento de voz
+
+                  ),
                   DropdownButton<String>(
                     value: localSelectedCategory, // Valor local
                     onChanged: (String? newValue) {
@@ -161,6 +209,7 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
             TextButton(
               child: Text("Cancelar"),
               onPressed: () {
+                _itemController.clear();
                 Navigator.of(context).pop(); // Fecha o popup
               },
             ),
