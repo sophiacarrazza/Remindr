@@ -1,0 +1,13 @@
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/lib/assets/images/home.jpg
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

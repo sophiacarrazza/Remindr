@@ -1,0 +1,28 @@
+^C:\USERS\LIVIA\DOCUMENTS\LABORATORIODW\REMINDR\REMINDR\BUILD\WINDOWS\X64\CMAKEFILES\38432BF3DD6DF656A399E6950362498F\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\livia\Documents\LaboratorioDW\flutter PROJECT_DIR=C:\Users\livia\Documents\LaboratorioDW\Remindr\remindr FLUTTER_ROOT=C:\Users\livia\Documents\LaboratorioDW\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\livia\Documents\LaboratorioDW\Remindr\remindr\windows\flutter\ephemeral PROJECT_DIR=C:\Users\livia\Documents\LaboratorioDW\Remindr\remindr FLUTTER_TARGET=C:\Users\livia\Documents\LaboratorioDW\Remindr\remindr\lib\main.dart DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz10cnVl DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\livia\Documents\LaboratorioDW\Remindr\remindr\.dart_tool\package_config.json C:/Users/livia/Documents/LaboratorioDW/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LIVIA\DOCUMENTS\LABORATORIODW\REMINDR\REMINDR\BUILD\WINDOWS\X64\CMAKEFILES\6E246FD4B6FF678DFD148535791C625E\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LIVIA\DOCUMENTS\LABORATORIODW\REMINDR\REMINDR\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/windows -BC:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64 --check-stamp-file C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

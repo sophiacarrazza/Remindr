@@ -1,0 +1,10 @@
+^C:\USERS\LIVIA\DOCUMENTS\LABORATORIODW\REMINDR\REMINDR\BUILD\WINDOWS\X64\CMAKEFILES\3DEBF71285F087BACA3CC273ED3E6B96\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
