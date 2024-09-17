@@ -8,34 +8,6 @@ void main() {
 }
 
 class TelaBemVindo extends StatelessWidget {
-  void _showAddItemDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text('Adicionar Item'),
-          content: TextField(
-            decoration: InputDecoration(hintText: 'Nome do item'),
-          ),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text('Cancelar'),
-            ),
-            TextButton(
-              onPressed: () {
-                // Adicionar item à lista
-                Navigator.of(context).pop();
-              },
-              child: Text('Adicionar'),
-            ),
-          ],
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {

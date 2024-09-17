@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-import 'main.dart';
 void main() {
   runApp(MaterialApp(
     home: ListaDeCompras(),
