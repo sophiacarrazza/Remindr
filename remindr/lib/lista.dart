@@ -120,35 +120,42 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
 
   // Função para mostrar o popup de adicionar item
   void _showAddItemDialog(BuildContext context) {
+    String localSelectedCategory = _selectedCategory; // Variável local para armazenar a categoria selecionada
+
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text("Adicionar Item"),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              TextField(
-                controller: _itemController,
-                decoration: InputDecoration(labelText: "Nome do item"),
-              ),
-              SizedBox(height: 20),
-              DropdownButton<String>(
-                value: _selectedCategory,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    _selectedCategory = newValue!;
-                  });
-                },
-                items: <String>['Farmácia', 'Shopping', 'Supermercado']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-              ),
-            ],
+          content: StatefulBuilder(
+            // Permite recriar o estado dentro do diálogo
+            builder: (BuildContext context, StateSetter setState) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  TextField(
+                    controller: _itemController,
+                    decoration: InputDecoration(labelText: "Nome do item"),
+                  ),
+                  SizedBox(height: 20),
+                  DropdownButton<String>(
+                    value: localSelectedCategory, // Valor local
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        localSelectedCategory = newValue!;
+                      });
+                    },
+                    items: <String>['Farmácia', 'Shopping', 'Supermercado']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                ],
+              );
+            },
           ),
           actions: <Widget>[
             TextButton(
@@ -160,6 +167,9 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
             TextButton(
               child: Text("Adicionar"),
               onPressed: () {
+                setState(() {
+                  _selectedCategory = localSelectedCategory; // Atualiza a categoria global
+                });
                 _addItemToCategory();
                 Navigator.of(context).pop(); // Fecha o popup
               },
