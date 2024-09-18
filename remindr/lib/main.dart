@@ -82,15 +82,17 @@ class TelaBemVindo extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+            SizedBox(width: 50),
             IconButton(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home, size: 50),
               color: Colors.white,
               onPressed: () {
                 // Ação do botão Home
               },
             ),
+            Spacer(),
             IconButton(
-              icon: Icon(Icons.menu),
+              icon: Icon(Icons.menu, size: 50),
               color: Colors.white,
               onPressed: () {
                 Navigator.push(
@@ -101,21 +103,28 @@ class TelaBemVindo extends StatelessWidget {
                 );
               },
             ),
+            SizedBox(width: 50),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ListaDeCompras(showPopup: true),
-            ),
-          );
-        },
-        child: Icon(Icons.add, size: 40, color: Colors.white),
-        shape: StadiumBorder(),
-        backgroundColor: Color(0xFFF9AA33),
+      floatingActionButton: Container(
+        height: 90.0,
+        width: 90.0,
+        child: FittedBox(
+          child: FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ListaDeCompras(showPopup: true),
+                ),
+              );
+            },
+            child: Icon(Icons.add, size: 40, color: Colors.white),
+            shape: StadiumBorder(),
+            backgroundColor: Color(0xFFF9AA33),
+          ),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart'; // Certifique-se de importar cupertino.dart
 import 'lista.dart';
-import 'main.dart';
-import 'package:cupertino_text_button/cupertino_text_button.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -47,10 +46,12 @@ class Login extends StatelessWidget {
                     labelText: 'Senha',
                   ),
                 ),
-                CupertinoTextButton(
-                  text: 'Apply',
-                  style: const TextStyle(fontSize: 20),
-                  onTap: () {
+                CupertinoButton(
+                  child: Text(
+                    'Apply',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {
                     // Do your text stuff here.
                   },
                 ),
@@ -58,52 +59,59 @@ class Login extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          color: Color(0xFF344955),
-          notchMargin: 8.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.home),
-                color: Colors.white,
-                onPressed: () {
-                  Navigator.popUntil(context, ModalRoute.withName('/'));
-                  // Ação do botão Home
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.menu),
-                color: Colors.white,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ListaDeCompras(),
-                    ),
-                  );
-                },
-              ),
-            ],
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        color: Color(0xFF344955),
+        notchMargin: 8.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SizedBox(width: 50),
+            IconButton(
+              icon: Icon(Icons.home, size: 50),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.popUntil(context, ModalRoute.withName('/'));
+              },
+            ),
+            Spacer(),
+            IconButton(
+              icon: Icon(Icons.menu, size: 50),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListaDeCompras(showPopup: false),
+                  ),
+                );
+              },
+            ),
+            SizedBox(width: 50),
+          ],
+        ),
+      ),
+      floatingActionButton: Container(
+        height: 90.0,
+        width: 90.0,
+        child: FittedBox(
+          child: FloatingActionButton(
+            onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListaDeCompras(showPopup: true),
+                  ),
+                );
+            },
+            child: Icon(Icons.add, size: 40, color: Colors.white),
+            shape: StadiumBorder(),
+            backgroundColor: Color(0xFFF9AA33),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ListaDeCompras(showPopup: true),
-              ),
-            );
-          },
-          child: Icon(Icons.add, size: 40, color: Colors.white),
-          shape: StadiumBorder(),
-          backgroundColor: Color(0xFFF9AA33),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    ),
     );
   }
 }
-
