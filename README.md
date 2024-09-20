@@ -27,9 +27,9 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Você instalou a versão mais recente de `<flutter / android studio>`
 - Você tem uma máquina `<Windows / Linux / Mac>`.
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalando Remindr
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+Para instalar o Remindr, siga estas etapas:
 
 1. Copie o https do repositório.
 2. Vá ao terminal do git onde você quer instalar o projeto.
@@ -46,34 +46,34 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+      <a href="https://github.com/laura3141" title="defina o título do link">
+        <img src="https://github.com/user-attachments/assets/6edbc266-cc90-43f5-96a0-52d43af68cac" width="100px;" alt="Foto da Laura"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Laura </b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+      <a href="https://github.com/liviacx" title="defina o título do link">
+        <img src="https://github.com/user-attachments/assets/f9a9d393-b9d2-4405-8950-c55548852d0d" width="100px;" alt="Foto da Lívia"/><br>
         <sub>
-          <b>Mark Zuckerberg</b>
+          <b>Lívia Xavier</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+      <a href="LucaGonzaga" title="defina o título do link">
+        <img src="https://github.com/user-attachments/assets/b9143166-0c6f-47ab-8209-060b8c710baf" width="100px;" alt="Foto do Luca"/><br>
         <sub>
-          <b>Steve Jobs</b>
+          <b>Luca Lourenço</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+      <a href="https://github.com/sophiacarrazza" title="defina o título do link">
+        <img src="https://github.com/user-attachments/assets/7ce06a54-1db9-4938-940b-ddcf7654f780" width="100px;" alt="Foto da Sophia"/><br>
         <sub>
-          <b>Steve Jobs</b>
+          <b>Sophia Carrazza</b>
         </sub>
       </a>
     </td>
