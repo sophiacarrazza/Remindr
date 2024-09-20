@@ -63,7 +63,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="LucaGonzaga" title="defina o título do link">
+      <a href="https://github.com/LucaGonzaga" title="defina o título do link">
         <img src="https://github.com/user-attachments/assets/b9143166-0c6f-47ab-8209-060b8c710baf" width="100px;" alt="Foto do Luca"/><br>
         <sub>
           <b>Luca Lourenço</b>
