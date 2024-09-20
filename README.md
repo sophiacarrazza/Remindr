@@ -2,10 +2,11 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/sophiacarrazza/Remindr?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/sophiacarrazza/Remindr?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/sophiacarrazza/Remindr?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/sophiacarrazza/Remindr?style=for-the-badge
+<!--
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/sophiacarrazza/Remindr?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/sophiacarrazza/Remindre?style=for-the-badge)
-
+-->
 <img src="imagem.png" alt="Exemplo imagem">
 
 > Aplicativo de lembretes de listas de compras com integração ao Google Maps para o Laboratório de Dispositivos Móveis da PUC Minas.
