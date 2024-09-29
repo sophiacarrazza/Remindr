@@ -10,7 +10,14 @@ void main() {
   ));
 }
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  bool _isPasswordVisible = false; // Variável para controlar a visibilidade da senha
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,9 +62,10 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20), // Espaço entre as caixas de texto
-                // Caixa de texto para Senha
+                // Caixa de texto para Senha com ícone para mostrar/ocultar
                 TextField(
                   cursorColor: Colors.black,
+                  obscureText: !_isPasswordVisible, // Controle de visibilidade da senha
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Senha',
@@ -66,6 +74,18 @@ class Login extends StatelessWidget {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black), // Borda preta ao focar
+                    ),
+                    // Ícone para mostrar/ocultar senha
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible = !_isPasswordVisible; // Alterna visibilidade
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -199,5 +219,3 @@ class Login extends StatelessWidget {
     );
   }
 }
-
-

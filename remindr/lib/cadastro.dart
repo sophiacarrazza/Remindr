@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart'; // Certifique-se de importar cupertino.dart
 import 'package:flutter/services.dart';
 import 'lista.dart';
 import 'login.dart';
@@ -10,7 +9,15 @@ void main() {
   ));
 }
 
-class Cadastro extends StatelessWidget {
+class Cadastro extends StatefulWidget {
+  @override
+  _CadastroState createState() => _CadastroState();
+}
+
+class _CadastroState extends State<Cadastro> {
+  bool _isPasswordVisible = false;
+  bool _isConfirmPasswordVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,10 +27,16 @@ class Cadastro extends StatelessWidget {
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Login())
-              );
+                  context, MaterialPageRoute(builder: (context) => Login()));
             },
+          ),
+          title: Center(
+            child: Text('CRIE SUA CONTA',
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto',
+                )),
           ),
         ),
         body: SingleChildScrollView(
@@ -33,16 +46,7 @@ class Cadastro extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 100), // Espaço para subir os elementos
-                Text(
-                  'CRIE SUA CONTA',
-                  style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Roboto',
-                  ),
-                ),
-                SizedBox(height: 40),
+                SizedBox(height: 20),
                 TextField(
                   cursorColor: Colors.black,
                   inputFormatters: [
@@ -50,16 +54,14 @@ class Cadastro extends StatelessWidget {
                   ],
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Nome', // Label do campo
-                    labelStyle: TextStyle(
-                      color: Colors.black,
-                    ),
+                    labelText: 'Nome',
+                    labelStyle: TextStyle(color: Colors.black),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 TextField(
                   cursorColor: Colors.black,
                   inputFormatters: [
@@ -67,66 +69,123 @@ class Cadastro extends StatelessWidget {
                   ],
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Sobrenome', // Label do campo
-                    labelStyle: TextStyle(
-                      color: Colors.black,
-                    ),
+                    labelText: 'Sobrenome',
+                    labelStyle: TextStyle(color: Colors.black),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 Row(
                   children: [
-                    // Campo CPF
                     Expanded(
                       child: TextField(
                         cursorColor: Colors.black,
-                        keyboardType: TextInputType.number, // Teclado numérico
+                        keyboardType: TextInputType.number,
                         inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly, // Aceitar apenas números
-                          LengthLimitingTextInputFormatter(11), // Limitar a 11 dígitos
+                          FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(11),
                         ],
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'CPF', // Alterado para CPF
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                          ),
+                          labelText: 'CPF',
+                          labelStyle: TextStyle(color: Colors.black),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(width: 16), // Espaço entre os dois campos
-                    // Campo Data de Nascimento
+                    SizedBox(width: 16),
                     Expanded(
                       child: TextField(
                         cursorColor: Colors.black,
-                        keyboardType: TextInputType.number, // Teclado numérico
+                        keyboardType: TextInputType.number,
                         inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly, // Aceitar apenas números
-                          LengthLimitingTextInputFormatter(10), // Limitar a 10 caracteres (DD/MM/YYYY)
-                          DateTextInputFormatter(), // Formatador personalizado para data
+                          FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(10),
+                          DateTextInputFormatter(),
                         ],
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Data de Nascimento',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                          ),
+                          labelStyle: TextStyle(color: Colors.black),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black),
                           ),
-                          hintText: 'DD/MM/AAAA', // Sugestão de formato
+                          hintText: 'DD/MM/AAAA',
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
+                TextField(
+                  cursorColor: Colors.black,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                    labelStyle: TextStyle(color: Colors.black),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  cursorColor: Colors.black,
+                  obscureText: !_isPasswordVisible,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Senha',
+                    labelStyle: TextStyle(color: Colors.black),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible = !_isPasswordVisible;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  cursorColor: Colors.black,
+                  obscureText: !_isConfirmPasswordVisible,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Repita sua senha',
+                    labelStyle: TextStyle(color: Colors.black),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isConfirmPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isConfirmPasswordVisible =
+                          !_isConfirmPasswordVisible;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -153,8 +212,6 @@ class Cadastro extends StatelessWidget {
             ),
           ),
         ),
-
-
         bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
           color: Color(0xFF344955),
@@ -206,35 +263,35 @@ class Cadastro extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation:
+        FloatingActionButtonLocation.centerDocked,
       ),
     );
   }
 }
+
 class DateTextInputFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(TextEditingValue oldValue,
       TextEditingValue newValue,) {
-    // Remover todos os caracteres que não sejam números
     String digitsOnly = newValue.text.replaceAll(RegExp(r'[^0-9]'), '');
-
     if (digitsOnly.length > 8) {
-      digitsOnly = digitsOnly.substring(0, 8); // Limitar a 8 dígitos
+      digitsOnly = digitsOnly.substring(0, 8);
     }
 
     String formattedDate = '';
     if (digitsOnly.length >= 2) {
-      formattedDate = digitsOnly.substring(0, 2); // Dia
+      formattedDate = digitsOnly.substring(0, 2);
       if (digitsOnly.length >= 4) {
-        formattedDate += '/' + digitsOnly.substring(2, 4); // Mês
+        formattedDate += '/' + digitsOnly.substring(2, 4);
         if (digitsOnly.length > 4) {
-          formattedDate += '/' + digitsOnly.substring(4); // Ano
+          formattedDate += '/' + digitsOnly.substring(4);
         }
       } else if (digitsOnly.length > 2) {
-        formattedDate += '/' + digitsOnly.substring(2); // Mês incompleto
+        formattedDate += '/' + digitsOnly.substring(2);
       }
     } else {
-      formattedDate = digitsOnly; // Apenas dia incompleto
+      formattedDate = digitsOnly;
     }
 
     return TextEditingValue(
@@ -243,6 +300,7 @@ class DateTextInputFormatter extends TextInputFormatter {
     );
   }
 }
+
 
 
 
