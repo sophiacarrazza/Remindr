@@ -4,7 +4,46 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7510850-4f44-4a26-ae82-e0bca41f481f" name="Changes" comment="" />
+    <list default="true" id="f7510850-4f44-4a26-ae82-e0bca41f481f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Remindr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Remindr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_program.d" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_program.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_program.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_program.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/program.dill" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/program.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/NOTICES.Z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/kernel_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/shaders/ink_sparkle.frag" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/shaders/ink_sparkle.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/navegacao_telas_app.exe" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/navegacao_telas_app.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/navegacao_telas_app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/navegacao_telas_app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/flutter_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/flutter_window.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/generated_plugin_registrant.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegacao_telas_app.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegacao_telas_app.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/lib/cadastro.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/lib/cadastro.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/lib/esqueceu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/lib/esqueceu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/lib/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/lib/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +55,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;laura3141&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sophiacarrazza/Remindr.git&quot;,
+    &quot;accountId&quot;: &quot;5080a900-0deb-4c06-b92e-9a36af23fd77&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mCCGAMWE76P9YFKTsa9vZ7gTeO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,16 +80,36 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Flutter.Unnamed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr"
+    "last_opened_file_path": "C:/flutter/src/flutter/bin/cache/dart-sdk",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\laura\Documents\Remindr\remindr\lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="FlutterRunConfigurationType" factoryName="Flutter" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/remindr/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

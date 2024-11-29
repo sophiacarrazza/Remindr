@@ -8,6 +8,7 @@ void main() {
   ));
 }
 
+//tela estatica
 class TelaBemVindo extends StatelessWidget {
 
   @override
@@ -33,7 +34,7 @@ class TelaBemVindo extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Login())
+                    MaterialPageRoute(builder: (context) => LoginScreen())
                   );
                 // Ação do botão de configurações
               },

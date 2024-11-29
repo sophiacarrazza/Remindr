@@ -21,7 +21,7 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
+
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
@@ -35,6 +35,13 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+    plugins {
+        id 'com.android.application' version '8.0.2' apply false // Verifique se a versão está atualizada
+        id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+    }
+
+// Resto do arquivo de configuração do build...
+
 
     buildTypes {
         release {
