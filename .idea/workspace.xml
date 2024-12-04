@@ -4,7 +4,312 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7510850-4f44-4a26-ae82-e0bca41f481f" name="Changes" comment="" />
+    <list default="true" id="f7510850-4f44-4a26-ae82-e0bca41f481f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Remindr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Remindr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Affiliation Database" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Affiliation Database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/BrowsingTopicsState" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/BrowsingTopicsState" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/DIPS" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/DIPS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Rules/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Rules/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Rules/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Rules/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Scripts/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension Scripts/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension State/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension State/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension State/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension State/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension State/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Extension State/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Favicons" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Favicons" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/History" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/History" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Login Data" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Login Data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Login Data For Account" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Login Data For Account" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network Action Predictor" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network Action Predictor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Cookies" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Network Persistent State" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Network Persistent State" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Reporting and NEL" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Reporting and NEL" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/TransportSecurity" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/TransportSecurity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Trust Tokens" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Network/Trust Tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Preferences" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Preferences" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Safe Browsing Network/Safe Browsing Cookies" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Safe Browsing Network/Safe Browsing Cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Secure Preferences" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Secure Preferences" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/Database/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Session Storage/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Session_13371045824400125" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Session_13371047004059965" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Session_13371054009141567" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Session_13371054639344152" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Tabs_13371046436278160" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Tabs_13371047004201660" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Tabs_13371054009259360" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sessions/Tabs_13371054639554113" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Shared Dictionary/db" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Shared Dictionary/db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/SharedStorage" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/SharedStorage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Shortcuts" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Shortcuts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Top Sites" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Top Sites" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Visited Links" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Visited Links" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Web Data" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/Web Data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/WebStorage/QuotaManager" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/WebStorage/QuotaManager" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/chrome_cart_db/LOCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/chrome_cart_db/LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/chrome_cart_db/LOG.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/coupon_db/LOCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/coupon_db/LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/coupon_db/LOG.old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/.filecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/app.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/debug_bundle_windows-x64_assets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/flutter_assets.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/gen_dart_plugin_registrant.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/gen_localizations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_native_assets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_program.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/kernel_snapshot_program.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/native_assets.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/native_assets.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/native_assets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/native_assets.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/outputs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/program.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/unpack_windows.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/flutter_build/f5b8c7c28a0adc0c44865d17dad250dd/windows_engine_sources.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/.last_build_id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/3da7a6be0351eaa2fac0796df5707051/_composite.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/3da7a6be0351eaa2fac0796df5707051/gen_dart_plugin_registrant.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/3da7a6be0351eaa2fac0796df5707051/gen_localizations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/febc83ababd5d827c2df7599df8feabe/_composite.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/febc83ababd5d827c2df7599df8feabe/gen_dart_plugin_registrant.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/febc83ababd5d827c2df7599df8feabe/gen_localizations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/AssetManifest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/AssetManifest.bin.json" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/AssetManifest.bin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/NOTICES.Z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/kernel_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/flutter_assets/shaders/ink_sparkle.frag" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/build/flutter_assets/shaders/ink_sparkle.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/last_build_run.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/ALL_BUILD.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/ALL_BUILD.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.exe.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/Cl.items.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CompilerIdCXX.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.secondary.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/VCTargetsPath.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/VCTargetsPath.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/VCTargetsPath/x64/Debug/VCTargetsPath.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3.29.5-msvc4/VCTargetsPath/x64/Debug/VCTargetsPath.tlog/VCTargetsPath.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/38432bf3dd6df656a399e6950362498f/flutter_windows.dll.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3debf71285f087baca3cc273ed3e6b96/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/3debf71285f087baca3cc273ed3e6b96/generate.stamp.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/6e246fd4b6ff678dfd148535791c625e/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/6e246fd4b6ff678dfd148535791c625e/flutter_assemble.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/71b701b7a6e99361c239aadcfceb49dc/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/generate.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/generate.stamp.depend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/CMakeFiles/generate.stamp.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/INSTALL.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/INSTALL.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/ZERO_CHECK.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/ZERO_CHECK.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/CMakeFiles/generate.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/CMakeFiles/generate.stamp.depend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/Debug/flutter_wrapper_app.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/Debug/flutter_wrapper_app.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/Debug/flutter_wrapper_plugin.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/Debug/flutter_wrapper_plugin.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/INSTALL.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/INSTALL.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_assemble.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_assemble.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/core_implementations.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/Cl.items.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/Lib-link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/Lib-link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/Lib.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_.2EA5F725.tlog/flutter_wrapper_app.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_engine.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_view_controller.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/flutter_wrapper_app.lib.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.dir/Debug/standard_codec.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_app.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/core_implementations.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/Cl.items.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/Lib-link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/Lib-link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/Lib.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.3EC00383.tlog/flutter_wrapper_plugin.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/flutter_wrapper_plugin.lib.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/plugin_registrar.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.dir/Debug/standard_codec.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/flutter_wrapper_plugin.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/x64/Debug/flutter_assemble/flutter_assemble.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/flutter_assemble.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/install_manifest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/navegacao_telas_app.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/ALL_BUILD.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/ALL_BUILD.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/CMakeFiles/generate.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/CMakeFiles/generate.stamp.depend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/lib/assets/images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/data/icudtl.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/flutter_windows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/navegacao_telas_app.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/Debug/navegacao_telas_app.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/INSTALL.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/INSTALL.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/Runner.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/flutter_window.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/Cl.items.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/link.secondary.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/navegacao_telas_app.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/rc.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/rc.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegaca.415114D6.tlog/rc.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegacao_telas_app.exe.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/navegacao_telas_app.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/utils.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/vc143.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.dir/Debug/win32_window.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/navegacao_telas_app.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/runner/runner.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ALL_BUILD/ALL_BUILD.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/ALL_BUILD.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/INSTALL/INSTALL.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/INSTALL/INSTALL.tlog/INSTALL.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ZERO_CHECK/ZERO_CHECK.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/build/windows/x64/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/lib/lista.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/lib/lista.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remindr/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/remindr/windows/flutter/generated_plugins.cmake" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,26 +321,45 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sophiacarrazza&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sophiacarrazza/Remindr.git&quot;,
+    &quot;accountId&quot;: &quot;bcce8ca6-343c-4f32-a94a-a35bd5fb5774&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mCCGAMWE76P9YFKTsa9vZ7gTeO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/livia/Documents/LaboratorioDW/Remindr/remindr"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sophi/Documents/Faculdade/Remindr&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

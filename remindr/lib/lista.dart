@@ -2,30 +2,36 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
-void main() {
-  runApp(MaterialApp(
-    home: ListaDeCompras(),
-  ));
-}
-
 class ListaDeCompras extends StatefulWidget {
   final bool showPopup;
-  ListaDeCompras({this.showPopup = false}); // valor padrão
+  ListaDeCompras({
+    this.showPopup = false,
+    this.farmaciaItems = const [],
+    this.shoppingItems = const [],
+    this.supermercadoItems = const [],
+  }); // valor padrão
+  final List<String> farmaciaItems;
+  final List<String> shoppingItems;
+  final List<String> supermercadoItems;
+
+  ListaDeCompras.named({
+    required this.farmaciaItems,
+    required this.shoppingItems,
+    required this.supermercadoItems,
+    this.showPopup = false,
+  });
 
   @override
   _ListaDeComprasState createState() => _ListaDeComprasState();
 }
-
 class _ListaDeComprasState extends State<ListaDeCompras> {
-  // Listas de itens por categoria
-  List<String> farmaciaItems = [];
-  List<String> shoppingItems = [];
-  List<String> supermercadoItems = [];
+  late List<String> farmaciaItems;
+  late List<String> shoppingItems;
+  late List<String> supermercadoItems;
 
-  String _selectedCategory = 'Farmácia'; // Categoria selecionada inicialmente
+  String _selectedCategory = 'Farmácia';
   final TextEditingController _itemController = TextEditingController();
 
-  // Variáveis para reconhecimento de voz
   late stt.SpeechToText _speech;
   bool _isListening = false;
   String _textSpoken = "";
@@ -35,7 +41,11 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
     super.initState();
     _speech = stt.SpeechToText();
 
-    // Mostrar o diálogo se o parâmetro showPopup for verdadeiro
+    // Inicializa as listas recebidas
+    farmaciaItems = List.from(widget.farmaciaItems);
+    shoppingItems = List.from(widget.shoppingItems);
+    supermercadoItems = List.from(widget.supermercadoItems);
+
     if (widget.showPopup) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _showAddItemDialog(context);
@@ -43,7 +53,6 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
     }
   }
 
-  // Função para iniciar ou parar o reconhecimento de voz
   void _listen() async {
     if (!_isListening) {
       bool available = await _speech.initialize();
@@ -72,7 +81,11 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.popUntil(context, ModalRoute.withName('/'));
+            Navigator.pop(context, {
+              'Farmácia': farmaciaItems,
+              'Shopping': shoppingItems,
+              'Supermercado': supermercadoItems,
+            });
           },
         ),
       ),
@@ -157,9 +170,8 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
     );
   }
 
-  // Função para mostrar o popup de adicionar item
   void _showAddItemDialog(BuildContext context) {
-    String localSelectedCategory = _selectedCategory; // Variável local para armazenar a categoria selecionada
+    String localSelectedCategory = _selectedCategory;
 
     showDialog(
       context: context,
@@ -167,7 +179,6 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
         return AlertDialog(
           title: Text("Adicionar Item"),
           content: StatefulBuilder(
-            // Permite recriar o estado dentro do diálogo
             builder: (BuildContext context, StateSetter setState) {
               return Column(
                 mainAxisSize: MainAxisSize.min,
@@ -177,17 +188,15 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
                     decoration: InputDecoration(labelText: "Nome do item"),
                   ),
                   SizedBox(height: 20),
-                  // Botão para iniciar o reconhecimento de voz
                   IconButton(
                     icon: Icon(
                       _isListening ? Icons.mic : Icons.mic_none,
                       color: _isListening ? Colors.red : Colors.black,
                     ),
-                    onPressed: _listen, // Inicia/parar o reconhecimento de voz
-
+                    onPressed: _listen,
                   ),
                   DropdownButton<String>(
-                    value: localSelectedCategory, // Valor local
+                    value: localSelectedCategory,
                     onChanged: (String? newValue) {
                       setState(() {
                         localSelectedCategory = newValue!;
@@ -210,17 +219,17 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
               child: Text("Cancelar"),
               onPressed: () {
                 _itemController.clear();
-                Navigator.of(context).pop(); // Fecha o popup
+                Navigator.of(context).pop();
               },
             ),
             TextButton(
               child: Text("Adicionar"),
               onPressed: () {
                 setState(() {
-                  _selectedCategory = localSelectedCategory; // Atualiza a categoria global
+                  _selectedCategory = localSelectedCategory;
                 });
                 _addItemToCategory();
-                Navigator.of(context).pop(); // Fecha o popup
+                Navigator.of(context).pop();
               },
             ),
           ],
@@ -229,7 +238,6 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
     );
   }
 
-  // Função para adicionar o item na categoria correta
   void _addItemToCategory() {
     String itemName = _itemController.text;
 
@@ -243,11 +251,10 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
           supermercadoItems.add(itemName);
         }
       });
-      _itemController.clear(); // Limpa o campo de texto após adicionar
+      _itemController.clear();
     }
   }
 
-  // Função para deletar o item da categoria correta
   void _deleteItem(String categoria, int index) {
     setState(() {
       if (categoria == 'Farmácia') {

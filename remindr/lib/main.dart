@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'lista.dart';
+import 'lista.dart'; // A tela de edição de listas
 import 'login.dart';
+import 'map_screen.dart';
+import 'dart:math' as math;
 
 void main() {
   runApp(MaterialApp(
@@ -8,7 +10,16 @@ void main() {
   ));
 }
 
-class TelaBemVindo extends StatelessWidget {
+class TelaBemVindo extends StatefulWidget {
+  @override
+  _TelaBemVindoState createState() => _TelaBemVindoState();
+}
+
+class _TelaBemVindoState extends State<TelaBemVindo> {
+  // Listas de itens por categoria (no exemplo, itens já existentes)
+  List<String> farmaciaItems = [];
+  List<String> shoppingItems = [];
+  List<String> supermercadoItems = [];
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +46,6 @@ class TelaBemVindo extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) => Login())
                   );
-                // Ação do botão de configurações
               },
             ),
           ],
@@ -55,21 +65,24 @@ class TelaBemVindo extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(16.0),
-              child: Image.asset(
-                'lib/assets/images/home.jpg',
-                height: 300,
-                fit: BoxFit.cover,
-              ),
-            ),
-            SizedBox(height: 20),
             Text(
-              'Clique no "+" para adicionar um item em sua lista ou em "☰" para visualizá-la.',
+              'Clique no "📍" para visualizar o mapa ou em "☰" para adicionar ou editar um item em sua lista.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey[700],
+              ),
+            ),
+            SizedBox(height: 20),
+            // Aqui começa a visualização das listas
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.all(8),
+                children: <Widget>[
+                  _buildCategoria('Farmácia', farmaciaItems),
+                  _buildCategoria('Shopping', shoppingItems),
+                  _buildCategoria('Supermercado', supermercadoItems),
+                ],
               ),
             ),
           ],
@@ -84,10 +97,15 @@ class TelaBemVindo extends StatelessWidget {
           children: <Widget>[
             SizedBox(width: 50),
             IconButton(
-              icon: Icon(Icons.home, size: 50),
+              icon: Icon(Icons.location_on, size: 50),
               color: Colors.white,
               onPressed: () {
-                // Ação do botão Home
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => MapScreen(),
+                    ),
+                );
               },
             ),
             Spacer(),
@@ -95,12 +113,25 @@ class TelaBemVindo extends StatelessWidget {
               icon: Icon(Icons.menu, size: 50),
               color: Colors.white,
               onPressed: () {
+                // Redireciona para a tela de edição das listas
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                    builder: (context) => ListaDeCompras(),
-                ),
-                );
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListaDeCompras(
+                      farmaciaItems: farmaciaItems,
+                      shoppingItems: shoppingItems,
+                      supermercadoItems: supermercadoItems,
+                    ),
+                  ),
+                ).then((updatedItems) {
+                  if (updatedItems != null) {
+                    setState(() {
+                      farmaciaItems = updatedItems['Farmácia'];
+                      shoppingItems = updatedItems['Shopping'];
+                      supermercadoItems = updatedItems['Supermercado'];
+                    });
+                  }
+                });
               },
             ),
             SizedBox(width: 50),
@@ -116,9 +147,22 @@ class TelaBemVindo extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ListaDeCompras(showPopup: true),
+                  builder: (context) => ListaDeCompras(
+                    showPopup: true,
+                    farmaciaItems: farmaciaItems,
+                    shoppingItems: shoppingItems,
+                    supermercadoItems: supermercadoItems,
+                  ),
                 ),
-              );
+              ).then((updatedItems) {
+                if (updatedItems != null) {
+                  setState(() {
+                    farmaciaItems = updatedItems['Farmácia'];
+                    shoppingItems = updatedItems['Shopping'];
+                    supermercadoItems = updatedItems['Supermercado'];
+                  });
+                }
+              });
             },
             child: Icon(Icons.add, size: 40, color: Colors.white),
             shape: StadiumBorder(),
@@ -127,6 +171,29 @@ class TelaBemVindo extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+
+  // Função para construir a visualização das categorias de lista
+  Widget _buildCategoria(String categoria, List<String> itens) {
+    return Card(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      child: ExpansionTile(
+        title: Row(
+          children: [
+            Icon(Icons.category,
+                color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                    .withOpacity(1.0)),
+            SizedBox(width: 10),
+            Text(categoria),
+          ],
+        ),
+        children: itens.map((item) {
+          return ListTile(
+            title: Text(item),
+          );
+        }).toList(),
+      ),
     );
   }
 }

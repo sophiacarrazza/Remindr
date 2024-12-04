@@ -24,6 +24,10 @@ dependencies:
   flutter:
     sdk: flutter
   speech_to_text: ^7.0.0
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1 # Para trabalhar com coordenadas
+  geolocator: ^9.0.2 # Para obter a localização do dispositivo
+  cloud_firestore: ^4.9.0 # Para integração com Firebase
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -33,7 +37,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_lints: ^5.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
