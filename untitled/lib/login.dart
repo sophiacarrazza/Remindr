@@ -4,6 +4,8 @@ import 'db.dart';
 import 'lista.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -48,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black87),
+        iconTheme: const IconThemeData(color: Colors.black87),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),

@@ -16,7 +16,7 @@ class ListaDeCompras extends StatefulWidget {
   final bool showPopup;
   final int userId; // Adicionando o campo username
 
-  ListaDeCompras({this.showPopup = false, required this.userId,required this.username});
+  const ListaDeCompras({super.key, this.showPopup = false, required this.userId,required this.username});
 
   @override
   _ListaDeComprasState createState() => _ListaDeComprasState();
@@ -101,7 +101,7 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
       elevation: 0,
       title: Text(
         'Olá ${widget.username}!',
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.black,
           fontSize: 20,
           fontWeight: FontWeight.bold,
@@ -110,7 +110,7 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
 
     ),
       body: ListView(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         children: <Widget>[
           _buildCategoria('Farmácia', farmaciaItems),
           _buildCategoria('Shopping', shoppingItems),
@@ -118,15 +118,15 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        color: Color(0xFF344955),
+        shape: const CircularNotchedRectangle(),
+        color: const Color(0xFF344955),
         notchMargin: 8.0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            SizedBox(width: 50),
+            const SizedBox(width: 50),
             IconButton(
-              icon: Icon(Icons.map, size: 50),
+              icon: const Icon(Icons.map, size: 50),
               color: Colors.white,
               onPressed: () {
                 Navigator.push(
@@ -136,9 +136,9 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
                 );
               },
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
-              icon: Icon(Icons.logout, size: 50),
+              icon: const Icon(Icons.logout, size: 50),
               color: Colors.white,
               onPressed: () {
                 Navigator.push(
@@ -147,11 +147,11 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
                 );
               },
             ),
-            SizedBox(width: 50),
+            const SizedBox(width: 50),
           ],
         ),
       ),
-      floatingActionButton: Container(
+      floatingActionButton: SizedBox(
         height: 90.0,
         width: 90.0,
         child: FittedBox(
@@ -159,9 +159,9 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
             onPressed: () {
               _showAddItemDialog(context);
             },
+            shape: const StadiumBorder(),
+            backgroundColor: const Color(0xFFF9AA33),
             child: Icon(Icons.add, size: 40, color: Colors.white),
-            shape: StadiumBorder(),
-            backgroundColor: Color(0xFFF9AA33),
           ),
         ),
       ),
@@ -169,16 +169,18 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
     );
   }
 
-  Widget _buildCategoria(String categoria, List<String> itens) {
-    return Card(
-      margin: EdgeInsets.symmetric(vertical: 8),
+Widget _buildCategoria(String categoria, List<String> itens) {
+  return Card(
+    margin: const EdgeInsets.symmetric(vertical: 8),
+    child: Theme(
+      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
         title: Row(
           children: [
             Icon(Icons.category,
                 color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
                     .withOpacity(1.0)),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Text(categoria),
           ],
         ),
@@ -188,7 +190,7 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
           return ListTile(
             title: Text(item),
             trailing: IconButton(
-              icon: Icon(Icons.delete, color: Colors.red),
+              icon: const Icon(Icons.delete, color: Colors.red),
               onPressed: () {
                 _deleteItem(categoria, index);
               },
@@ -196,8 +198,9 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
           );
         }).toList(),
       ),
-    );
-  }
+    ),
+  );
+}
 
   // Função para mostrar o popup de adicionar item
   void _showAddItemDialog(BuildContext context) {
@@ -207,7 +210,7 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Adicionar Item"),
+          title: const Text("Adicionar Item"),
           content: StatefulBuilder(
             // Permite recriar o estado dentro do diálogo
             builder: (BuildContext context, StateSetter setState) {
@@ -216,9 +219,9 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
                 children: <Widget>[
                   TextField(
                     controller: _itemController,
-                    decoration: InputDecoration(labelText: "Nome do item"),
+                    decoration: const InputDecoration(labelText: "Nome do item"),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Botão para iniciar o reconhecimento de voz
                   IconButton(
                     icon: Icon(
@@ -248,14 +251,14 @@ class _ListaDeComprasState extends State<ListaDeCompras> {
           ),
           actions: <Widget>[
             TextButton(
-              child: Text("Cancelar"),
+              child: const Text("Cancelar"),
               onPressed: () {
                 _itemController.clear();
                 Navigator.of(context).pop(); // Fecha o popup
               },
             ),
             TextButton(
-              child: Text("Adicionar"),
+              child: const Text("Adicionar"),
               onPressed: () {
                 setState(() {
                   _selectedCategory = localSelectedCategory; // Atualiza a categoria global

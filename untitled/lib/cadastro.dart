@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'db.dart';
 
 class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
+
   @override
   _SignupScreenState createState() => _SignupScreenState();
 }
@@ -42,7 +44,7 @@ class _SignupScreenState extends State<SignupScreen> {
         ),
         backgroundColor: Colors.white, // Fundo branco para AppBar
         elevation: 0, // Remove a sombra da AppBar
-        iconTheme: IconThemeData(color: Colors.black87), // Cor do ícone de voltar
+        iconTheme: const IconThemeData(color: Colors.black87), // Cor do ícone de voltar
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),

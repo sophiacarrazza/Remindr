@@ -10,13 +10,15 @@ void main() {
 }
 
 class Esqueceu extends StatelessWidget {
+  const Esqueceu({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(
                   context,
@@ -32,8 +34,8 @@ class Esqueceu extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 100), // Espaço para subir os elementos
-                Text(
+                const SizedBox(height: 100), // Espaço para subir os elementos
+                const Text(
                   'RECUPERAR SENHA',
                   style: TextStyle(
                     fontSize: 36,
@@ -41,8 +43,8 @@ class Esqueceu extends StatelessWidget {
                     fontFamily: 'Roboto',
                   ),
                 ),
-                SizedBox(height: 40),
-                TextField(
+                const SizedBox(height: 40),
+                const TextField(
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -55,18 +57,18 @@ class Esqueceu extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF344955),
-                      padding: EdgeInsets.symmetric(vertical: 15),
+                      backgroundColor: const Color(0xFF344955),
+                      padding: const EdgeInsets.symmetric(vertical: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Enviar',
                       style: TextStyle(
                         fontSize: 20,
@@ -85,23 +87,23 @@ class Esqueceu extends StatelessWidget {
 
 
         bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          color: Color(0xFF344955),
+          shape: const CircularNotchedRectangle(),
+          color: const Color(0xFF344955),
           notchMargin: 8.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              SizedBox(width: 50),
+              const SizedBox(width: 50),
               IconButton(
-                icon: Icon(Icons.home, size: 50),
+                icon: const Icon(Icons.home, size: 50),
                 color: Colors.white,
                 onPressed: () {
                   Navigator.popUntil(context, ModalRoute.withName('/'));
                 },
               ),
-              Spacer(),
+              const Spacer(),
               IconButton(
-                icon: Icon(Icons.menu, size: 50),
+                icon: const Icon(Icons.menu, size: 50),
                 color: Colors.white,
                 onPressed: () {
                   Navigator.push(
@@ -112,11 +114,11 @@ class Esqueceu extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(width: 50),
+              const SizedBox(width: 50),
             ],
           ),
         ),
-        floatingActionButton: Container(
+        floatingActionButton: SizedBox(
           height: 90.0,
           width: 90.0,
           child: FittedBox(
@@ -129,9 +131,9 @@ class Esqueceu extends StatelessWidget {
                   ),
                 );
               },
+              shape: const StadiumBorder(),
+              backgroundColor: const Color(0xFFF9AA33),
               child: Icon(Icons.add, size: 40, color: Colors.white),
-              shape: StadiumBorder(),
-              backgroundColor: Color(0xFFF9AA33),
             ),
           ),
         ),
