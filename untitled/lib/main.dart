@@ -89,11 +89,8 @@ class TelaBemVindo extends StatelessWidget {
               icon: Icon(Icons.home, size: 50),
               color: Colors.white,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MapScreen()
-                  ),
-                );
+
+
               },
             ),
             Spacer(),

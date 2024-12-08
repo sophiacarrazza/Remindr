@@ -3,6 +3,7 @@ import 'cadastro.dart';
 import 'db.dart';
 import 'lista.dart';
 
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -23,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
+
           builder: (context) => ListaDeCompras(userId: userId2,username: username,),
         ),
       );
@@ -142,3 +144,4 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 }
+

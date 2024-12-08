@@ -11,7 +11,7 @@ class DatabaseHelper {
 
   Future<Database> get database async {
     if (_database != null) return _database!;
-    _database = await _initDB('usersL.db');
+    _database = await _initDB('projeto.db');
     return _database!;
   }
 
@@ -45,6 +45,15 @@ class DatabaseHelper {
       FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE
     )
   ''');
+    await db.execute('''
+    CREATE TABLE locations (
+            userId INTEGER,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            latitude REAL NOT NULL,
+            longitude REAL NOT NULL,
+            tag TEXT NOT NULL
+          )
+  ''');
 
   }
   Future<int> registerUser(String username, String password) async {
@@ -57,6 +66,40 @@ class DatabaseHelper {
     return await db.insert('products', {'userId': userId, 'productName': productName, 'productClass': productClass});
   }
 
+  Future<int> registerLocation(int userId, double latitude, double longitude, String tag) async {
+    final db = await database;
+    final Map<String, dynamic> location = {
+      'userId': userId,
+      'latitude': latitude,
+      'longitude': longitude,
+      'tag': tag
+    };
+
+    // Insere o local na tabela 'locations'
+    return await db.insert('locations', location);
+  }
+
+  Future<List<Map<String, dynamic>>> getLocationsByUserId(int userId) async {
+    final db = await instance.database;
+
+    // Consulta as localizações associadas ao userId
+    return await db.query(
+      'locations',
+      where: 'userId = ?',
+      whereArgs: [userId],
+    );
+  }
+
+  Future<int> deleteLocationByCoordinates(int userId, double latitude, double longitude) async {
+    final db = await instance.database;
+
+    // Deleta a localização com base no userId, latitude e longitude
+    return await db.delete(
+      'locations',
+      where: 'userId = ? AND latitude = ? AND longitude = ?',
+      whereArgs: [userId, latitude, longitude],
+    );
+  }
 
   Future<Map<String, dynamic>?> loginUser(String username, String password) async {
     final db = await instance.database;
