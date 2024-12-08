@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:http/http.dart' as http;
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as Path;
 
@@ -19,6 +21,8 @@ class _MapScreenState extends State<MapScreen> {
   late MapController _mapController;
   late Database _database;
   Marker? _temporaryMarker; // Armazena o marcador temporário
+  Marker? _searchMarker; // Armazena o marcador de pesquisa atual
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
@@ -33,7 +37,6 @@ class _MapScreenState extends State<MapScreen> {
   Future<void> _initDatabase() async {
     final databasePath = await getDatabasesPath();
     final path = Path.join(databasePath, 'locations.db');
-
     _database = await openDatabase(
       path,
       version: 1,
@@ -63,25 +66,26 @@ class _MapScreenState extends State<MapScreen> {
   Future<void> _loadSavedLocations() async {
     final List<Map<String, dynamic>> savedLocations =
         await _database.query('locations');
-
     setState(() {
       for (var location in savedLocations) {
         final LatLng point =
             LatLng(location['latitude'], location['longitude']);
         final String tag = location['tag'];
-
         // Adiciona os marcadores salvos à lista com tooltip da tag
         _markers.add(
           Marker(
             point: point,
             width: 40.0,
             height: 40.0,
-            child: Tooltip(
-              message: tag,
-              child: const Icon(
-                Icons.location_on,
-                color: Color.fromARGB(255, 244, 54, 89),
-                size: 40.0,
+            child: GestureDetector(
+              onTap: () => _showDeletePopup(context, point), // Popup para deletar
+              child: Tooltip(
+                message: tag,
+                child: const Icon(
+                  Icons.location_on,
+                  color: Color.fromARGB(255, 244, 54, 89), // Vermelho para salvo
+                  size: 40.0,
+                ),
               ),
             ),
           ),
@@ -133,16 +137,17 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
+  // Exibe popup para selecionar uma tag e adicionar um marcador
   Future<void> _showTagPopup(BuildContext context, LatLng point) async {
-    // Adiciona um marcador temporário com o ícone "+" verde
     setState(() {
+      // Adiciona um marcador temporário com o ícone verde "+"
       _temporaryMarker = Marker(
         point: point,
         width: 40.0,
         height: 40.0,
         child: const Icon(
           Icons.add_circle,
-          color: Color.fromARGB(255, 74, 168, 151), // Verde para marcador temporário
+          color: Color.fromARGB(255, 74, 168, 151),
           size: 40.0,
         ),
       );
@@ -150,86 +155,54 @@ class _MapScreenState extends State<MapScreen> {
 
     String? selectedTag = await showDialog<String>(
       context: context,
-      builder: (BuildContext context) {
-        return LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            // Tamanho da tela
-            final screenWidth = MediaQuery.of(context).size.width;
-            final screenHeight = MediaQuery.of(context).size.height;
-
-            // Tamanho fixo do popup
-            const double popupWidth = 300.0;
-            const double popupHeight = 1000.0;
-
-            // Cálculo da posição central
-            final double topPosition = (screenHeight / 2) - (popupHeight / 2);
-            final double leftPosition = (screenWidth / 2) - (popupWidth / 2);
-
-            return Stack(
-              children: [
-                Positioned(
-                  top: topPosition,
-                  left: leftPosition,
-                  child: Container(
-                    width: popupWidth,
-                    height: popupHeight,
-                    child: AlertDialog(
-                      title: const Text('Escolha uma tag'),
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          ListTile(
-                            title: const Text('Supermercado'),
-                            onTap: () => Navigator.pop(context, 'Supermercado'),
-                          ),
-                          ListTile(
-                            title: const Text('Farmácia'),
-                            onTap: () => Navigator.pop(context, 'Farmácia'),
-                          ),
-                          ListTile(
-                            title: const Text('Shopping'),
-                            onTap: () => Navigator.pop(context, 'Shopping'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            );
-          },
-        );
-      },
+      builder: (BuildContext context) => AlertDialog(
+        title: const Text("Escolha uma tag"),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              title: const Text("Supermercado"),
+              onTap: () => Navigator.pop(context, "Supermercado"),
+            ),
+            ListTile(
+              title: const Text("Farmácia"),
+              onTap: () => Navigator.pop(context, "Farmácia"),
+            ),
+            ListTile(
+              title: const Text("Shopping"),
+              onTap: () => Navigator.pop(context, "Shopping"),
+            ),
+          ],
+        ),
+      ),
     );
 
     if (selectedTag != null) {
       setState(() {
-        // Remove o marcador temporário e adiciona o marcador vermelho com a tag selecionada
         if (_temporaryMarker != null) {
           _markers.remove(_temporaryMarker);
           _temporaryMarker = null;
         }
-        _markers.add(
-          Marker(
-            point: point,
-            width: 40.0,
-            height: 40.0,
-            child: Tooltip(
-              message: selectedTag,
+        // Adiciona o marcador salvo com a tag selecionada
+        _markers.add(Marker(
+          point: point,
+          width: 40.0,
+          height: 40.0,
+          child: Tooltip(
+            message: selectedTag,
+            child: GestureDetector(
+              onTap: () => _showDeletePopup(context, point),
               child: const Icon(
                 Icons.location_on,
-                color: Color.fromARGB(255, 244, 54, 89), // Vermelho para marcador salvo
+                color: Color.fromARGB(255, 244, 54, 89),
                 size: 40.0,
               ),
             ),
           ),
-        );
+        ));
       });
-
-      // Salva o local no banco de dados
       await _saveLocation(point, selectedTag);
     } else {
-      // Remove o marcador temporário se nenhuma tag for selecionada
       setState(() {
         if (_temporaryMarker != null) {
           _markers.remove(_temporaryMarker);
@@ -239,49 +212,138 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
+  // Exibe popup para confirmar a exclusão do marcador salvo
+  Future<void> _showDeletePopup(BuildContext context, LatLng point) async {
+    final bool? shouldDelete = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        title: const Text("Excluir marcador"),
+        content:
+            const Text("Você deseja excluir este marcador permanentemente?"),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text("Cancelar")),
+          TextButton(onPressed: () => Navigator.pop(context, true), child: const Text("Excluir")),
+        ],
+      ),
+    );
+
+    if (shouldDelete == true) {
+      setState(() {
+        // Remove o marcador da lista e do banco de dados
+        _markers.removeWhere((marker) => marker.point == point);
+      });
+
+      await _database.delete(
+        'locations',
+        where: 'latitude = ? AND longitude = ?',
+        whereArgs: [point.latitude, point.longitude],
+      );
+
+      print("Marcador excluído em $point");
+    }
+  }
+
+  // Função para buscar locais usando a API do Nominatim
+  Future<void> _searchLocation(String query) async {
+    if (query.isEmpty) return;
+
+    final url = Uri.parse('https://nominatim.openstreetmap.org/search?q=$query&format=json&limit=1');
+
+    try {
+      final response = await http.get(url);
+
+      if (response.statusCode == 200) {
+        final List<dynamic> results = jsonDecode(response.body);
+
+        if (results.isNotEmpty) {
+          final double lat = double.parse(results[0]['lat']);
+          final double lon = double.parse(results[0]['lon']);
+
+          setState(() {
+            // Remove o marcador de pesquisa anterior
+            if (_searchMarker != null) {
+              _markers.remove(_searchMarker);
+            }
+
+            // Adiciona o novo marcador de pesquisa
+            final newSearchMarker = Marker(
+              point: LatLng(lat, lon),
+              width: 40.0,
+              height: 40.0,
+              child: const Icon(Icons.location_on, color: Color.fromARGB(255, 227, 112, 4), size: 40.0),
+            );
+
+            _searchMarker = newSearchMarker;
+            _markers.add(newSearchMarker);
+
+            // Centraliza o mapa na localização encontrada
+            _mapController.move(LatLng(lat, lon), 15.0);
+          });
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nenhum resultado encontrado')));
+        }
+      } else {
+        throw Exception('Erro ao buscar localização');
+      }
+    } catch (e) {
+      print('Erro na pesquisa de localização $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Mapa de Localização'),
+    appBar: AppBar(
+      title: TextField(
+        decoration: InputDecoration(
+          hintText: "Buscar local...",
+          suffixIcon: IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () => _searchLocation(_searchController.text),
+          ),
+        ),
+        controller: _searchController,
+        textInputAction: TextInputAction.search,
+        onSubmitted: (value) => _searchLocation(value),
       ),
-      body: _currentPosition == null
-          ? const Center(child: CircularProgressIndicator())
-          : FlutterMap(
-              mapController: _mapController,
-              options: MapOptions(
-                crs: const Epsg3857(),
-                initialCenter:
-                    _currentPosition ?? const LatLng(-15.7801, -47.9292),
-                maxZoom: 18.0,
-                onTap: (tapPosition, point) async {
-                  await _showTagPopup(context, point);
-                },
-              ),
-              children: [
-                TileLayer(
-                  urlTemplate:
-                      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                  subdomains: const ['a', 'b', 'c'],
-                ),
-                MarkerLayer(markers: [
-                  ..._markers,
-                  if (_temporaryMarker != null) _temporaryMarker!,
-                  if (_currentPosition != null)
-                    Marker(
-                      point: _currentPosition!,
-                      width: 40.0,
-                      height: 40.0,
-                      child: const Icon(
-                        Icons.location_pin,
-                        color:
-                            Color.fromARGB(255, 30, 121, 196), // Ícone da posição atual
-                        size: 40.0,
-                      ),
-                    ),
-                ]),
-              ],
+    ),
+    body: _currentPosition == null
+        ? const Center(child: CircularProgressIndicator())
+        : FlutterMap(
+            mapController: _mapController,
+            options: MapOptions(
+              crs: const Epsg3857(),
+              initialCenter:
+                  _currentPosition ?? const LatLng(-15.7801, -47.9292),
+              maxZoom: 18.0,
+              onTap: (tapPosition, point) async {
+                await _showTagPopup(context, point); // Popup para selecionar tag
+              },
             ),
-    );
-  }
+            children: [
+              TileLayer(
+                urlTemplate:
+                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                subdomains: const ['a', 'b', 'c'],
+              ),
+              MarkerLayer(markers: [
+                ..._markers,
+                if (_temporaryMarker != null) _temporaryMarker!,
+                if (_currentPosition != null)
+                  Marker(
+                    point: _currentPosition!,
+                    width: 40.0,
+                    height: 40.0,
+                    child: const Icon(
+                      Icons.location_pin,
+                      color:
+                          Color.fromARGB(255, 30, 121, 196), // Ícone da posição atual
+                      size: 40.0,
+                    ),
+                  ),
+              ]),
+            ],
+          ),
+  );
+}
 }
