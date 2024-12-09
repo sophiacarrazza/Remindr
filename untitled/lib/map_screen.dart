@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
@@ -8,6 +10,7 @@ import 'package:http/http.dart' as http;
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as Path;
 import 'db.dart';
+
 
 class MapScreen extends StatefulWidget {
   final int userId; // Recebe o ID do usuário
@@ -19,6 +22,8 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+  FlutterLocalNotificationsPlugin();
   LatLng? _currentPosition;
   List<Marker> _markers = [];
   late MapController _mapController;
@@ -32,6 +37,9 @@ class _MapScreenState extends State<MapScreen> {
     _mapController = MapController();
     _getCurrentLocation();
     _loadSavedLocations(widget.userId); // Carrega locais salvos ao iniciar
+    _initializeNotifications();
+    _checkProximity();
+
   }
 
   // Salva um local no banco de dados
@@ -82,35 +90,59 @@ class _MapScreenState extends State<MapScreen> {
     }
   }
 
+  Future<void> _initializeNotifications() async {
+    print('1');
+
+    await flutterLocalNotificationsPlugin
+        .resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>()
+        ?.requestPermission();
+
+    const AndroidInitializationSettings initializationSettingsAndroid =
+    AndroidInitializationSettings('@mipmap/ic_launcher');
+
+    const InitializationSettings initializationSettings =
+    InitializationSettings(android: initializationSettingsAndroid);
+
+    await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+    print('2');
+  }
+
+  Future<void> _showNotification(final tag) async {
+    print('5');
+    const AndroidNotificationDetails androidDetails =
+    AndroidNotificationDetails(
+      'location_proximity',
+      'Proximity Alert',
+      importance: Importance.high,
+      priority: Priority.high,
+    );
+
+    const NotificationDetails notificationDetails =
+    NotificationDetails(android: androidDetails);
+    print('6');
+
+    try {
+      await flutterLocalNotificationsPlugin.show(
+        0,
+        'Você está próximo!',
+        'Você está próximo de um local marcado',  // Correção aqui
+        notificationDetails,
+      );
+      print('Notificação exibida');
+    } catch (e) {
+      print('Erro ao exibir notificação: $e');
+    }
+  }
 
   Future<void> _getCurrentLocation() async {
     try {
-      bool serviceEnabled;
-      LocationPermission permission;
+      bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      if (!serviceEnabled) return;
 
-      serviceEnabled = await Geolocator.isLocationServiceEnabled();
-      if (!serviceEnabled) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('O serviço de localização está desativado.')),
-        );
-        return;
-      }
-
-      permission = await Geolocator.checkPermission();
-      if (permission == LocationPermission.denied) {
-        permission = await Geolocator.requestPermission();
-        if (permission == LocationPermission.denied) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Permissão de localização negada.')),
-          );
-          return;
-        }
-      }
-
-      if (permission == LocationPermission.deniedForever) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Permissão de localização permanentemente negada.')),
-        );
+      LocationPermission permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied ||
+          permission == LocationPermission.deniedForever) {
         return;
       }
 
@@ -120,10 +152,51 @@ class _MapScreenState extends State<MapScreen> {
 
       setState(() {
         _currentPosition = LatLng(position.latitude, position.longitude);
+        _checkProximity();
       });
     } catch (e) {
       print('Erro ao obter localização: $e');
     }
+  }
+
+  void _checkProximity() {
+    print('3');
+    const double proximityThreshold = 0.05; // Distância em graus (~5km)
+
+    for (var marker in _markers) {
+      double distance = _calculateDistance(
+        _currentPosition!.latitude,
+        _currentPosition!.longitude,
+        marker.point.latitude,
+        marker.point.longitude,
+      );
+
+      if (distance <= proximityThreshold) {
+        final tag = DatabaseHelper.instance.getTagByCoordinates(widget.userId,  marker.point.latitude,  marker.point.longitude);
+        print('Local proximo');
+        _showNotification(tag);
+        break;
+      }
+    }
+  }
+
+  double _calculateDistance(
+      double lat1, double lon1, double lat2, double lon2) {
+    const double earthRadius = 6371; // Raio da Terra em km
+    double dLat = _degreesToRadians(lat2 - lat1);
+    double dLon = _degreesToRadians(lon2 - lon1);
+
+    double a = sin(dLat / 2) * sin(dLat / 2) +
+        cos(_degreesToRadians(lat1)) *
+            cos(_degreesToRadians(lat2)) *
+            sin(dLon / 2) *
+            sin(dLon / 2);
+    double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+    return earthRadius * c; // Distância em km
+  }
+
+  double _degreesToRadians(double degrees) {
+    return degrees * pi / 180;
   }
 
   // Exibe popup para selecionar uma tag e adicionar um marcador

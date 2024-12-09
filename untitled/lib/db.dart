@@ -90,6 +90,25 @@ class DatabaseHelper {
     );
   }
 
+  Future<String?> getTagByCoordinates(
+      int userId, double latitude, double longitude) async {
+    final db = await instance.database;
+
+    // Consulta para buscar a tag do ponto
+    var result = await db.query(
+      'locations',
+      columns: ['tag'], // Seleciona apenas a coluna 'tag'
+      where: 'userId = ? AND latitude = ? AND longitude = ?',
+      whereArgs: [userId, latitude, longitude],
+    );
+
+    // Verifica se encontrou algum registro e retorna a tag
+    if (result.isNotEmpty) {
+      return result.first['tag'] as String?;  // Retorna a tag do primeiro (único) resultado
+    } else {
+      return null;  // Retorna null caso não encontre o ponto
+    }
+  }
   Future<int> deleteLocationByCoordinates(int userId, double latitude, double longitude) async {
     final db = await instance.database;
 
